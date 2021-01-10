@@ -1,6 +1,7 @@
 package com.edu.algoexpert.dynamicprogramming;
 
 public class MaxSubsetSumNoAdjacent {
+
     // O(n) time : O(1) space
     public static int maxSubsetSumNoAdjacent_1(int[] array) {
         if(array == null || array.length == 0) {
@@ -11,7 +12,7 @@ public class MaxSubsetSumNoAdjacent {
 
         int second = array[0];
         int first = Math.max(array[0], array[1]);
-        int current = first;
+        int current;
         for(int i = 2; i < array.length; i++) {
             current = Math.max(first, second + array[i]);
             second = first;
